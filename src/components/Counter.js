@@ -1,12 +1,16 @@
+import { useState } from "react";
+
 const Counter=()=>{
-    let counter=0;
-    clickMe=()=>{
-        counter+=1;
+    const [counter,setCount]=useState(0);
+    const clickMe=()=>{
+        setCount(prevCount=>prevCount+1);
     }
+    {console.log("out ",counter)}
+
     return(
         <div>
-            <p>Button clicked {} times</p>
-            <button onClick="clickMe()">Click me</button>
+            <p>Button clicked {counter} times</p>
+            <button onClick={clickMe}>Click me</button>
         </div>
     )
 }
