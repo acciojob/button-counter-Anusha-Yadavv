@@ -1,18 +1,22 @@
-import { useState } from "react";
+import React, { useState } from 'react';
 
-const Counter=()=>{
-    const [counter,setCount]=useState(0);
-    const clickMe=()=>{
-        setCount(prevCount=>prevCount+1);
-    }
-    {console.log("out ",counter)}
+function Counter() {
+  // Initialize the counter state to 0 using useState
+  const [count, setCount] = useState(0);
 
-    return(
-        <div>
-            <p>Button clicked {counter} times</p>
-            <button onClick={clickMe}>Click me</button>
-        </div>
-    )
+  // Event handler for button click to increment count
+  const handleClick = () => {
+    setCount(count + 1); // Increment count by 1
+  };
+
+  return (
+    <div>
+      {/* Display the count */}
+      <p>Button clicked {count} times.</p>
+      {/* Button with onClick event handler */}
+      <button onClick={handleClick}>Click me</button>
+    </div>
+  );
 }
 
 export default Counter;
