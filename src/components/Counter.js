@@ -12,7 +12,7 @@ function Counter() {
   return (
     <div>
       {/* Display the count */}
-      <p>Button clicked {count} times.</p>
+      <p>Button clicked {count} times</p>
       {/* Button with onClick event handler */}
       <button onClick={handleClick}>Click me</button>
     </div>
